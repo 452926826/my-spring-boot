@@ -1,11 +1,11 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8700/eureka/}
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8700/eureka/}#注册到eureka
 sidecar:
-  port: 8089
-  home-page-uri: http://localhost:${sidecar.port}/
-  health-uri: http://localhost:${sidecar.port}/api/public/health.json
+  port: 8089 #指定sidecar端口号 事实上就是我们hap3.0的端口号
+  home-page-uri: http://localhost:${sidecar.port}/ #z指定首页
+  health-uri: http://localhost:${sidecar.port}/api/public/health.json #指定健康检查接口
 
 hystrix:
   command:
