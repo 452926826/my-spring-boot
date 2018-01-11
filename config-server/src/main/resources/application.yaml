@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://rdc.hand-china.com/gitlab/10890/my-spring-boot/
+          uri: https://github.com/452926826/my-spring-boot
           searchPaths: config-repo
           username:
           password:
