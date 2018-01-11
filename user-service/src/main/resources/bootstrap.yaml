@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8720}
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://localhost:8710}
+      discovery:
+        enabled: true
+        serviceId: user-service

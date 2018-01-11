@@ -1,0 +1,19 @@
+server:
+  port: 8710
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://rdc.hand-china.com/gitlab/10890/my-spring-boot/
+          searchPaths: config-repo
+          username:
+          password:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8700/eureka/
+    fetchRegistry: true
+    registerWithEureka: true

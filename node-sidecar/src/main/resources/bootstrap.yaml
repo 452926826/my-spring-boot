@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8741}
+spring:
+  application:
+    name: node-sidecar
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://localhost:8710}
+      discovery:
+        enabled: true
+        serviceId: node-sidecar
