@@ -8,13 +8,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 import java.util.List;
-
-/**
- * Created by marshal on 16/9/27.
- */
+import java.util.Map;
 
 @FeignClient(name = "node-sidecar")
 public interface BookFeignClient {
-    @RequestMapping("/books")
-    public List<Book> findByUid(@RequestParam("uid") Long id);
+    @RequestMapping("/api/public/health.json")
+    public Map<String,Object> getStatus();
 }

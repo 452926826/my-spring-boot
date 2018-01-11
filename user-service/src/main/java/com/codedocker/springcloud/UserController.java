@@ -7,14 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
-/**
- * Created by marshal on 16/9/26.
- */
 @RestController
 public class UserController {
 
@@ -55,13 +49,14 @@ public class UserController {
 
     @GetMapping("/author/{id}")
     public Author getAuthor(@PathVariable Long id) {
-        List<Book> books = bookFeignClient.findByUid(id);
-        User user = findById(id);
+        Map<String,Object> map = bookFeignClient.getStatus();
+        //User user = findById(id);
         Author author = new Author();
-        author.setId(user.getId());
-        author.setUsername(user.getUsername());
-        author.setAge(user.getAge());
-        author.setBooks(books);
+        author.setId(1L);
+        author.setUsername("123");
+        author.setAge(12);
+        //author.setBooks();
+        System.out.println(map.get("status"));
         return author;
     }
 

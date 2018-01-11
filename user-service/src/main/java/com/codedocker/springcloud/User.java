@@ -1,8 +1,5 @@
 package com.codedocker.springcloud;
 
-/**
- * Created by marshal on 16/9/27.
- */
 class User {
     private Long id;
     private String username;

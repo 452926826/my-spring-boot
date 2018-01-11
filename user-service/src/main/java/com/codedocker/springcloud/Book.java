@@ -4,9 +4,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by marshal on 16/9/27.
- */
 class Book {
     private Long id;
     private Long authorId;
